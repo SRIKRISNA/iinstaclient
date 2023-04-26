@@ -5,9 +5,10 @@ import Header from "../Header/header";
 import Footer from "../Footer/footer";
 
 const PostView = ()=> {
+    // "proxy":"https://iinsta-back.onrender.com",
     const [userData, setPostData] = useState([]);
     useEffect(()=> {
-        axios.get('/postform').then((res)=>{
+        axios.get('https://iinsta-back.onrender.com/postform').then((res)=>{
             let data = res.data.reverse();
             console.log(data)
             setPostData(data);
@@ -17,7 +18,7 @@ const PostView = ()=> {
     }, []);
     
     function deletePost(_id) {
-        axios.delete(`/delete/${_id}`).then((res) => {
+        axios.delete(`https://iinsta-back.onrender.com/delete/${_id}`).then((res) => {
             const newList = userData.filter((item) => item._id !== _id);
             setPostData(newList);
             console.log("post deleted");
