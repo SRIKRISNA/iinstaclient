@@ -5,10 +5,9 @@ import Header from "../Header/header";
 import Footer from "../Footer/footer";
 
 const PostView = ()=> {
-    // "proxy":"https://iinsta-back.onrender.com",
     const [userData, setPostData] = useState([]);
     useEffect(()=> {
-        axios.get('https://iinsta-back.onrender.com/postform').then((res)=>{
+        axios.get('https://iinsta-back.onrender.com').then((res)=>{
             let data = res.data.reverse();
             console.log(data)
             setPostData(data);
