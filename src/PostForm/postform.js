@@ -28,7 +28,7 @@ const PostForm = () =>{
     const handlePosts =()=>{
         console.log(posts);
         axios({
-            url: "https://iinsta-back.onrender.com",
+            url: "https://iinsta-back.onrender.com/postform",
             method: "POST",
             headers: {
             },
