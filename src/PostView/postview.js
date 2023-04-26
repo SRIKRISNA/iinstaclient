@@ -7,7 +7,7 @@ import Footer from "../Footer/footer";
 const PostView = ()=> {
     const [userData, setPostData] = useState([]);
     useEffect(()=> {
-        axios.get('https://iinsta-back.onrender.com').then((res)=>{
+        axios.get('https://iinsta-back.onrender.com/postform').then((res)=>{
             let data = res.data.reverse();
             console.log(data)
             setPostData(data);
